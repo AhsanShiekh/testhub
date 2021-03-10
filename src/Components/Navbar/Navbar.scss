@@ -1,0 +1,42 @@
+@import "../../Config/colors.scss";
+
+.Navbar {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid $primary;
+
+  .title {
+    color: $primary;
+    margin-left: 15px;
+  }
+  .options {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .main-option {
+      width: 70%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .login-register {
+      width: 30%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .line {
+        height: 5vh;
+        width: 2px;
+        background-color: $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../Config/colors.scss";
+
+.NavbarOption {
+  font-size: 18px;
+  color: grey;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-weight: 550;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.button {
+  background-color: $primary;
+  padding: 10px 25px;
+}

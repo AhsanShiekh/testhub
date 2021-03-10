@@ -1,0 +1,45 @@
+@import "../../../Config/colors.scss";
+
+.MainSectionSearchBar {
+  height: 100px;
+  width: 90%;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: darkgray;
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  .searchbar {
+    width: 75%;
+    height: 40%;
+    font-size: 18px;
+    z-index: 1;
+  }
+  .search {
+    padding: 15px 25px;
+    border: none;
+    background-color: $primary;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    z-index: 1;
+
+    &:hover {
+      background-color: darkslateblue;
+    }
+  }
+}
