@@ -1,31 +1,98 @@
 @import "../../../Config/colors.scss";
 
-.MainSection {
+.main-section-con {
   height: 90vh;
   width: 100vw;
-  background-image: linear-gradient(
-      129deg,
-      rgba(51, 51, 133, 0.4),
-      rgb(51, 51, 133)
-    ),
-    url("../../../Assets/Exams-bro.png");
-  background-size: 100% 100%;
-  background-position: 50% -38.5px, 50%;
-  overflow: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: black;
 
-  .content {
-    color: white;
-    text-align: center;
+  &::before {
+    height: 90vh;
+    margin-top: 10vh;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url("../../../Assets/studytexture.png");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+  }
 
-    .title {
-      font-size: 55px;
+  .MainSection {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    .content {
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+
+      .title {
+        font-size: 55px;
+        z-index: 10;
+      }
+      .tagline {
+        font-size: 20px;
+        color: $light;
+        z-index: 10;
+      }
+
+      &::before {
+        content: "";
+        margin-top: 10vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: 0.3;
+        z-index: -1;
+      }
     }
-    .tagline {
-      font-size: 20px;
-      color: $light;
+
+    &::before {
+      height: 90vh;
+      margin-top: 10vh;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(
+          150deg,
+          rgba(51, 51, 133, 0.4),
+          rgb(51, 51, 133)
+        ),
+        url("../../../Assets/Exams-bro.png");
+      background-size: 100% 100%;
+      background-position: center;
+      opacity: 0.9;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main-section-con {
+    .MainSection {
+      .content {
+        .title {
+          font-size: 45px;
+        }
+      }
     }
   }
 }

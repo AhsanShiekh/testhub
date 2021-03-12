@@ -4,14 +4,19 @@ import "./MainSection.scss";
 
 const MainSection = (props) => {
   return (
-    <div className="MainSection">
-      <div className="content">
-        <h1 className="title">Biggest Question Bank in Pakistan</h1>
-        <p className="tagline">
-          You can generate, attempt the any type of test by using our services.
-        </p>
+    <div className="main-section-con">
+      <div className="MainSection">
+        <div className="content">
+          <div>
+            <h1 className="title">Biggest Question Bank in Pakistan</h1>
+            <p className="tagline">
+              You can generate, attempt the any type of test by using our
+              services.
+            </p>
 
-        <MainSectionSearchBar />
+            <MainSectionSearchBar />
+          </div>
+        </div>
       </div>
     </div>
   );

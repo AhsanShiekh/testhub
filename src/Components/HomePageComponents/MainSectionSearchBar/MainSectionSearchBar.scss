@@ -2,13 +2,13 @@
 
 .MainSectionSearchBar {
   height: 100px;
-  width: 90%;
-  border-radius: 30px;
+  width: 100%;
+  border-radius: 10px;
   position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0;
+  overflow: hidden;
 
   &::before {
     content: "";
@@ -17,16 +17,19 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: darkgray;
+    background-color: #b2b6b9;
     opacity: 0.5;
     z-index: 0;
   }
 
   .searchbar {
     width: 75%;
-    height: 40%;
+    padding: 10px;
     font-size: 18px;
     z-index: 1;
+    outline: none;
+    border: none;
+    border-radius: 8px;
   }
   .search {
     padding: 15px 25px;
@@ -37,9 +40,29 @@
     cursor: pointer;
     transition: all 0.5s;
     z-index: 1;
+    border-radius: 8px;
 
     &:hover {
       background-color: darkslateblue;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .MainSectionSearchBar {
+    padding: 0;
+    height: 200px;
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .searchbar {
+      width: 85%;
+    }
+    .search {
+      width: 85%;
     }
   }
 }
