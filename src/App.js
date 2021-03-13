@@ -3,6 +3,8 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import HomePage from "./Pages/HomePage/HomePage";
+import { Switch, Route } from "react-router-dom";
+import BlogsPage from "./Pages/BlogsPage/BlogsPage";
 
 const App = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -13,7 +15,7 @@ const App = () => {
       document.getElementsByClassName("Sidebar")[0].classList.add("hide");
       setTimeout(() => {
         setShowSidebar(false);
-      }, 500);
+      }, 1000);
     }
   };
 
@@ -21,7 +23,11 @@ const App = () => {
     <div className="App">
       <Navbar sidebar={showHideSidebar} />
       <Sidebar show={showSidebar} />
-      <HomePage />
+
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/blogs" component={BlogsPage} />
+      </Switch>
     </div>
   );
 };

@@ -4,6 +4,7 @@
   height: 90vh;
   width: 100vw;
   background-color: black;
+  overflow: hidden;
 
   &::before {
     height: 90vh;
@@ -32,21 +33,20 @@
     .content {
       color: white;
       text-align: center;
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100%;
       width: 100%;
-      z-index: 10;
 
       .title {
         font-size: 55px;
-        z-index: 10;
+        font-weight: bold;
       }
       .tagline {
         font-size: 20px;
         color: $light;
-        z-index: 10;
       }
 
       &::before {

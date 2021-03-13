@@ -8,8 +8,15 @@ const MainSection = (props) => {
       <div className="MainSection">
         <div className="content">
           <div>
-            <h1 className="title">Biggest Question Bank in Pakistan</h1>
-            <p className="tagline">
+            <h1 data-aos="fade-up" data-aos-duration="700" className="title">
+              Biggest Question Bank in Pakistan
+            </h1>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="500"
+              className="tagline"
+            >
               You can generate, attempt the any type of test by using our
               services.
             </p>
