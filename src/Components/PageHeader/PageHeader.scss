@@ -1,0 +1,30 @@
+@import "../../Config/colors.scss";
+
+.PageHeader {
+  height: 45vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+
+  .background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+  .subtitle {
+    font-size: 17px;
+    color: $light;
+  }
+}

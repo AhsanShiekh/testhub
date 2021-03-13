@@ -15,14 +15,14 @@ const App = () => {
       document.getElementsByClassName("Sidebar")[0].classList.add("hide");
       setTimeout(() => {
         setShowSidebar(false);
-      }, 1000);
+      }, 900);
     }
   };
 
   return (
     <div className="App">
-      <Navbar sidebar={showHideSidebar} />
-      <Sidebar show={showSidebar} />
+      <Navbar showStatus={showSidebar} sidebar={showHideSidebar} />
+      <Sidebar show={showSidebar} close={showHideSidebar} />
 
       <Switch>
         <Route exact path="/" component={HomePage} />

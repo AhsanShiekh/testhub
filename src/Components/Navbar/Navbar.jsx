@@ -1,24 +1,27 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import LoginRegisterButton from "../Login_RegisterButton/Login_RegisterButton";
 import NavbarOption from "../NavbarOption/NavbarOption";
 import Hamburger from "./Hamburger/Hamburger";
 import "./Navbar.scss";
 
-const Navbar = ({ sidebar }) => {
+const Navbar = ({ sidebar, showStatus }) => {
   return (
     <div data-aos="fade-down" data-aos-duration="700" className="Navbar">
-      <h2 className="title">TestHub</h2>
+      <NavLink to="/" className="title">
+        TestHub
+      </NavLink>
 
       <div className="options">
         <div className="main-option">
-          <NavbarOption text="Generate Test" />
-          <NavbarOption text="Online Test" />
-          <NavbarOption text="Blog" />
+          <NavbarOption to="/generate-test" text="Generate Test" />
+          <NavbarOption to="/online-test" text="Online Test" />
+          <NavbarOption to="/blogs" text="Blog" />
         </div>
         <LoginRegisterButton />
       </div>
 
-      <Hamburger sidebar={sidebar} />
+      <Hamburger show={showStatus} sidebar={sidebar} />
     </div>
   );
 };

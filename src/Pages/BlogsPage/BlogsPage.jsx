@@ -1,10 +1,16 @@
 import React from "react";
+import PageHeader from "../../Components/PageHeader/PageHeader";
 import "./BlogsPage.scss";
+import study from "../../Assets/blogpagebg.png";
 
 const BlogsPage = (props) => {
   return (
     <div className="BlogsPage">
-      <h1>Blog Page</h1>
+      <PageHeader
+        title="Our Blog"
+        subtitle="Know us better and Stay up to date"
+        bgImage={study}
+      />
     </div>
   );
 };

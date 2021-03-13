@@ -6,13 +6,41 @@
   cursor: pointer;
   transition: all 0.5s;
   font-weight: 550;
+  text-decoration: none;
+  outline: none;
+  border-bottom: none;
 
   &:hover {
-    color: $primary;
+    color: $primary !important;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px $primary;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin: 0% 50%;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+.link-active {
+  color: $primary !important;
+
+  &::after {
+    transform: scaleX(1);
   }
 }
 
 .button {
   background-color: $primary;
   padding: 10px 25px;
+
+  &:hover {
+    background-color: white;
+    color: $primary;
+  }
 }
