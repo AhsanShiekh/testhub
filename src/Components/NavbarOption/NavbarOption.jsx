@@ -9,7 +9,7 @@ const NavbarOption = ({ text, color = "grey", button, to, close = null }) => {
       className={` ${button ? "button" : ""} NavbarOption`}
       to={`${to}`}
       activeClassName="link-active"
-      onClick={() => close("hide")}
+      onClick={close ? () => close("hide") : null}
     >
       {text}
     </NavLink>

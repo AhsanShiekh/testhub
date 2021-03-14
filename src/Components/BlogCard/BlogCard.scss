@@ -1,0 +1,34 @@
+.BlogCard {
+  height: 100%;
+  width: 100%;
+  box-shadow: 1px 8px 18px -5px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 1px 8px 18px -5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 1px 8px 18px -5px rgba(0, 0, 0, 0.7);
+  border-radius: 7px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s;
+
+  .image {
+    height: 200;
+    width: 100%;
+  }
+
+  .title-n-date {
+    height: 120;
+    width: 80%;
+    padding: 0 10%;
+
+    .title {
+      color: grey;
+    }
+    .date {
+      color: darkgray;
+      font-size: 18px;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+}

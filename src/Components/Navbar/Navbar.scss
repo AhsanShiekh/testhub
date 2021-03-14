@@ -7,6 +7,8 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+  position: fixed;
+  z-index: 2;
 
   .title {
     color: $primary;
@@ -45,11 +47,21 @@
   }
 }
 
+//mobiles
 @media only screen and (max-width: 800px) {
   .Navbar {
     .options {
       display: none;
       pointer-events: none;
+    }
+  }
+}
+
+//tabs
+@media only screen and (max-width: 1024px) and (min-width: 801px) {
+  .Navbar {
+    .options {
+      width: 80%;
     }
   }
 }
