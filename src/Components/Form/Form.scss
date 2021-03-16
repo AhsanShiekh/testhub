@@ -1,0 +1,26 @@
+@import "../../Config/colors.scss";
+
+.Form {
+  height: max-content;
+  width: 45%;
+  background-color: #fff;
+  margin: 25px 27.5%;
+  border: 2px solid $primary;
+  border-radius: 8px;
+}
+
+//mobiles
+@media only screen and (max-width: 800px) {
+  .Form {
+    width: 96%;
+    margin: 25px 2%;
+  }
+}
+
+//tabs
+@media only screen and (max-width: 1024px) and (min-width: 801px) {
+  .Form {
+    width: 70%;
+    margin: 25px 15%;
+  }
+}

@@ -27,14 +27,6 @@
   }
 }
 
-.link-active {
-  color: $primary !important;
-
-  &::after {
-    transform: scaleX(1);
-  }
-}
-
 .button {
   background-color: $primary;
   padding: 10px 25px;
@@ -42,5 +34,14 @@
   &:hover {
     background-color: white;
     color: $primary;
+  }
+}
+
+.link-active {
+  color: $primary !important;
+  background-color: #fff;
+
+  &::after {
+    transform: scaleX(1);
   }
 }

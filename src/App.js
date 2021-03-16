@@ -6,6 +6,7 @@ import HomePage from "./Pages/HomePage/HomePage";
 import { Switch, Route } from "react-router-dom";
 import BlogsPage from "./Pages/BlogsPage/BlogsPage";
 import LoginPage from "./Pages/LoginPage/LoginPage";
+import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 
 const App = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -29,6 +30,7 @@ const App = () => {
         <Route exact path="/" component={HomePage} />
         <Route path="/blogs" component={BlogsPage} />
         <Route path="/login" component={LoginPage} />
+        <Route path="/register" component={RegisterPage} />
       </Switch>
     </div>
   );

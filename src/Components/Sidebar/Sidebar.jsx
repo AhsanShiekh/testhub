@@ -16,7 +16,7 @@ const Sidebar = ({ show, close }) => {
             />
             <NavbarOption close={close} to="online-test" text="Online Test" />
             <NavbarOption close={close} to="/blogs" text="Blog" />
-            <LoginRegisterButton />
+            <LoginRegisterButton closeSidebar={close} />
           </div>
         </div>
       ) : null}
