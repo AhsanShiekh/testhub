@@ -1,0 +1,36 @@
+@import "../../Config/colors.scss";
+
+.RegisterPage {
+  height: 90vh;
+  width: 100vw;
+  margin-top: 10vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  .content {
+    width: 100%;
+    height: max-content;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-bottom: 2px solid $primary;
+  }
+
+  .footer {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link {
+    margin: 0 0 0 20px;
+    color: $primary;
+    border-bottom: 1px solid $primary;
+    display: inline;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

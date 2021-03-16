@@ -7,7 +7,7 @@ const BlogCard = (props) => {
       <img
         className="image"
         src="https://tse1.mm.bing.net/th?id=OIP.ZSeaAZ6lgX2gJiwrEnjEwAHaE8&pid=Api&P=0&w=255&h=171"
-        alt="blog-image"
+        alt="blog"
       />
 
       <div className="title-n-date">

@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   background-color: black;
+  text-align: center;
   color: white;
 
   .background {
@@ -26,5 +27,14 @@
   .subtitle {
     font-size: 17px;
     color: $light;
+  }
+}
+
+//mobiles
+@media only screen and (max-width: 800px) {
+  .PageHeader {
+    .subtitle {
+      padding: 0 20px;
+    }
   }
 }

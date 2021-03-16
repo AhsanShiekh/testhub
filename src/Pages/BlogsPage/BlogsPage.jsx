@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PageHeader from "../../Components/PageHeader/PageHeader";
 import "./BlogsPage.scss";
 import study from "../../Assets/blogpagebg.png";
 import BlogCard from "../../Components/BlogCard/BlogCard";
+import { useDispatch, useSelector } from "react-redux";
 
 const BlogsPage = (props) => {
+  const blogs = useSelector((state) => state.blogs.blogs);
+  console.log(blogs);
+
   return (
     <div className="BlogsPage">
       <PageHeader
