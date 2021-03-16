@@ -4,10 +4,21 @@ import "./BlogsPage.scss";
 import study from "../../Assets/blogpagebg.png";
 import BlogCard from "../../Components/BlogCard/BlogCard";
 import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import { APIURL } from "../../Config/constants";
+import { setBlogs } from "../../redux/Blogs/Blogs.actions";
 
 const BlogsPage = (props) => {
   const blogs = useSelector((state) => state.blogs.blogs);
-  console.log(blogs);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const fetchDara = async () => {
+      const response = await axios.get(`${APIURL}/blog/`);
+      dispatch(setBlogs(response.data.blogs));
+    };
+    fetchDara();
+  }, []);
 
   return (
     <div className="BlogsPage">
@@ -18,23 +29,13 @@ const BlogsPage = (props) => {
       />
 
       <div className="blog-cards">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        {blogs.map((blog) => (
+          <BlogCard
+            title={blog.title}
+            description={blog.content}
+            imageUrl={`${APIURL}/${blog.thumbnail}`}
+          />
+        ))}
       </div>
     </div>
   );
