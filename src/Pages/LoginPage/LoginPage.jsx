@@ -24,7 +24,12 @@ const LoginPage = (props) => {
         <div className="content">
           <InputField required type="email" placeholder="Email" />
           <div className="pass-con">
-            <InputField required type="password" placeholder="Password" />
+            <InputField
+              width="100%"
+              required
+              type="password"
+              placeholder="Password"
+            />
             <p className="link">Forgot Password?</p>
             <br />
           </div>

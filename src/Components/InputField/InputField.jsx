@@ -1,9 +1,9 @@
 import React from "react";
 import "./InputField.scss";
 
-const InputField = ({ placeholder, type, required }) => {
+const InputField = ({ placeholder, type, required, width = "80%" }) => {
   return (
-    <div className="InputField">
+    <div style={{ width }} className="InputField">
       <p className="placeholder">{placeholder}</p>
       <input required={required} type={type} className="field" />
     </div>

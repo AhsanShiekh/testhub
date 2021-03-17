@@ -32,6 +32,7 @@ const BlogsPage = (props) => {
         {blogs.map((blog) => (
           <BlogCard
             title={blog.title}
+            key={blog.slug}
             description={blog.content}
             imageUrl={`${APIURL}/${blog.thumbnail}`}
           />

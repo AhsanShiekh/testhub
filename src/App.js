@@ -31,6 +31,7 @@ const App = () => {
         <Route path="/blogs" component={BlogsPage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
+        <Route component={HomePage} />
       </Switch>
     </div>
   );

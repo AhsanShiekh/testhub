@@ -9,12 +9,12 @@
   overflow-x: hidden;
 
   .link {
-    margin: 0 0 0 20px;
     color: $primary;
     border-bottom: 1px solid $primary;
     display: inline;
     cursor: pointer;
     text-decoration: none;
+    align-self: flex-start;
   }
 
   .content {
@@ -24,11 +24,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     border-bottom: 2px solid $primary;
 
     .pass-con {
-      width: 100%;
+      width: 80%;
     }
   }
 
