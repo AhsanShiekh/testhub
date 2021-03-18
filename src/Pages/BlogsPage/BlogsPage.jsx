@@ -35,6 +35,7 @@ const BlogsPage = (props) => {
             key={blog.slug}
             description={blog.content}
             imageUrl={`${APIURL}/${blog.thumbnail}`}
+            slug={blog.slug}
           />
         ))}
       </div>

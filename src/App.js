@@ -7,6 +7,7 @@ import { Switch, Route } from "react-router-dom";
 import BlogsPage from "./Pages/BlogsPage/BlogsPage";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
+import BlogPage from "./Pages/BlogPage/BlogPage";
 
 const App = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/blogs" component={BlogsPage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
+        <Route path="/blog/:slug" component={BlogPage} />
         <Route component={HomePage} />
       </Switch>
     </div>

@@ -1,9 +1,10 @@
 import React from "react";
+import { withRouter } from "react-router";
 import "./BlogCard.scss";
 
-const BlogCard = ({ imageUrl, title, description }) => {
+const BlogCard = ({ imageUrl, title, description, slug, history }) => {
   return (
-    <div className="BlogCard">
+    <div className="BlogCard" onClick={() => history.push(`/blog/${slug}`)}>
       <img
         className="image"
         src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -18,4 +19,4 @@ const BlogCard = ({ imageUrl, title, description }) => {
   );
 };
 
-export default BlogCard;
+export default withRouter(BlogCard);
