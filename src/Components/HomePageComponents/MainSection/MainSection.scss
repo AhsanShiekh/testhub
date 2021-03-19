@@ -8,23 +8,23 @@
 
   &::before {
     height: 90vh;
+    width: 100vw;
     margin-top: 10vh;
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
     left: 0;
-    bottom: 0;
     background-image: url("../../../Assets/studytexture.png");
     background-position: center;
     background-size: cover;
     opacity: 0.5;
+    z-index: 0;
   }
 
   .MainSection {
     height: 100%;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,12 +37,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
       height: 100%;
       width: 100%;
 
       .title {
         font-size: 55px;
         font-weight: bold;
+        padding: 0 8px;
       }
       .tagline {
         font-size: 20px;
@@ -50,29 +52,28 @@
         padding-bottom: 15px;
       }
 
-      &::before {
-        content: "";
-        margin-top: 10vh;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: black;
-        opacity: 0.3;
-        z-index: -1;
-      }
+      // &::before {
+      //   content: "";
+      //   margin-top: 10vh;
+      //   position: absolute;
+      //   top: 0;
+      //   right: 0;
+      //   left: 0;
+      //   bottom: 0;
+      //   background-color: black;
+      //   opacity: 0.3;
+      //   z-index: -1;
+      // }
     }
 
     &::before {
       height: 90vh;
+      width: 100vw;
       margin-top: 10vh;
       content: "";
       position: absolute;
       top: 0;
-      right: 0;
       left: 0;
-      bottom: 0;
       background-image: linear-gradient(
           150deg,
           rgba(51, 51, 133, 0.4),
@@ -82,6 +83,7 @@
       background-size: 100% 100%;
       background-position: center;
       opacity: 0.9;
+      z-index: 0;
     }
   }
 }

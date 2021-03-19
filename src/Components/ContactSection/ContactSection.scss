@@ -1,2 +1,73 @@
+@import "../../Config/colors.scss";
+
 .ContactSection {
+  height: 90vh;
+  width: 100vw;
+  background-color: $primary;
+  z-index: 2000 !important;
+  overflow: auto;
+  color: white;
+  text-align: center;
+
+  p {
+    color: $primarylight;
+  }
+
+  .content {
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid $primarylight;
+
+    .follow-us {
+      width: 40%;
+      height: max-content;
+
+      .footer-link {
+        font-size: 25px;
+        text-decoration: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        margin: 8px 20px;
+        transition: all 0.5s;
+
+        &:hover {
+          transform: scale(1.2);
+          color: $primarylight;
+        }
+      }
+    }
+  }
+
+  .footer {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    z-index: 1000;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ContactSection {
+    .content {
+      flex-direction: column;
+      height: max-content;
+
+      .follow-us {
+        width: 100%;
+      }
+    }
+  }
 }

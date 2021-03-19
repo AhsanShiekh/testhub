@@ -33,7 +33,6 @@ const App = () => {
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
         <Route path="/blog/:slug" component={BlogPage} />
-        <Route component={HomePage} />
       </Switch>
     </div>
   );

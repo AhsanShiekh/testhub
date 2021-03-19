@@ -1,0 +1,41 @@
+@import "../../Config/colors.scss";
+
+.ContactForm {
+  height: 90%;
+  width: 40%;
+
+  .input,
+  .textarea {
+    width: 97%;
+    padding: 10px 5px;
+    margin: 10px 0;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid $primarylight;
+    color: $primarylight;
+    font-size: 16px;
+
+    &::placeholder {
+      color: $primarylight;
+    }
+  }
+
+  .submit {
+    padding: 15px 20px;
+    background-color: $primarylight;
+    border: 2px solid $dark;
+    text-align: center;
+    font-size: 17px;
+    color: $primary;
+    cursor: pointer;
+    border-radius: 15px;
+    outline: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ContactForm {
+    width: 95%;
+    margin: 0 2.5%;
+  }
+}
