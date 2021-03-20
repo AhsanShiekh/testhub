@@ -1,5 +1,5 @@
 import React from "react";
-import ContactSection from "../../Components/ContactSection/ContactSection";
+import Footer from "../../Components/Footer/Footer";
 import MainSection from "../../Components/HomePageComponents/MainSection/MainSection";
 import "./HomePage.scss";
 
@@ -7,7 +7,7 @@ const HomePage = (props) => {
   return (
     <div className="homepage">
       <MainSection />
-      <ContactSection />
+      <Footer />
     </div>
   );
 };

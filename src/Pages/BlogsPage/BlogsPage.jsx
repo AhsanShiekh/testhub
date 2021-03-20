@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { APIURL } from "../../Config/constants";
 import { setBlogs } from "../../redux/Blogs/Blogs.actions";
-import ContactSection from "../../Components/ContactSection/ContactSection";
+import Footer from "../../Components/Footer/Footer";
 
 const BlogsPage = (props) => {
   const blogs = useSelector((state) => state.blogs.blogs);
@@ -41,7 +41,7 @@ const BlogsPage = (props) => {
         ))}
       </div>
 
-      <ContactSection />
+      <Footer />
     </div>
   );
 };

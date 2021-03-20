@@ -4,8 +4,8 @@
   height: 90vh;
   width: 100vw;
   background-color: $primary;
-  z-index: 2000 !important;
-  overflow: auto;
+  z-index: 5 !important;
+  overflow: hidden;
   color: white;
   text-align: center;
 
@@ -14,36 +14,65 @@
   }
 
   .content {
-    height: 75%;
+    height: 90%;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid $primarylight;
 
+    .navigations {
+      text-align: left;
+
+      .navigation {
+        transition: color 0.5s;
+        cursor: pointer;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .about {
+      width: 30%;
+      text-align: left;
+
+      p {
+        display: inline;
+        color: $primarylight;
+      }
+
+      .learn-more {
+        color: white;
+        display: inline;
+        cursor: pointer;
+      }
+    }
+
     .follow-us {
-      width: 40%;
+      width: 30%;
       height: max-content;
 
       .footer-link {
         font-size: 25px;
         text-decoration: none;
         border: none;
-        color: white;
+        color: $primarylight;
         cursor: pointer;
         margin: 8px 20px;
         transition: all 0.5s;
 
         &:hover {
           transform: scale(1.2);
-          color: $primarylight;
+          color: white;
         }
       }
     }
   }
 
   .footer {
-    height: 150px;
+    height: 10%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -63,10 +92,23 @@
   .ContactSection {
     .content {
       flex-direction: column;
-      height: max-content;
+
+      .navigations,
+      .about {
+        width: 90%;
+        margin: 0 5%;
+      }
 
       .follow-us {
         width: 100%;
+
+        h2 {
+          margin: 3px;
+        }
+
+        .footer-link {
+          margin: 2px 20px;
+        }
       }
     }
   }

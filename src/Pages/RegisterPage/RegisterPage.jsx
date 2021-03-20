@@ -7,7 +7,7 @@ import InputField from "../../Components/InputField/InputField";
 import Button from "../../Components/Button/Button";
 import { NavLink } from "react-router-dom";
 import DropDown from "../../Components/DropDown/DropDown";
-import ContactSection from "../../Components/ContactSection/ContactSection";
+import Footer from "../../Components/Footer/Footer";
 
 const RegisterPage = (props) => {
   return (
@@ -36,7 +36,7 @@ const RegisterPage = (props) => {
           </p>
         </div>
       </Form>
-      <ContactSection />
+      <Footer />
     </div>
   );
 };
