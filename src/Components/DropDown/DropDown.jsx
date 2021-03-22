@@ -10,13 +10,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DropDown = (props) => {
+const DropDown = ({ value, onChange, required }) => {
   const classes = useStyles();
-  const [age, setAge] = React.useState("");
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
 
   return (
     <div className="DropDown">
@@ -24,12 +19,13 @@ const DropDown = (props) => {
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"
-        value={age}
-        onChange={handleChange}
+        value={value}
+        onChange={(e) => onChange(e)}
         className={classes.select}
+        required={required}
       >
-        <MenuItem value={10}>Student</MenuItem>
-        <MenuItem value={20}>Institute</MenuItem>
+        <MenuItem value="student">Student</MenuItem>
+        <MenuItem value="institute">Institute</MenuItem>
       </Select>
     </div>
   );

@@ -22,7 +22,7 @@ const LoginPage = (props) => {
           console.log("submitted");
         }}
       >
-        <div className="content">
+        <div className="form-content">
           <InputField required type="email" placeholder="Email" />
           <div className="pass-con">
             <InputField
