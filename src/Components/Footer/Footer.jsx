@@ -1,5 +1,4 @@
 import React from "react";
-import ContactForm from "../ContactForm/ContactForm";
 import "./Footer.scss";
 
 const ContactSection = (props) => {
@@ -11,7 +10,7 @@ const ContactSection = (props) => {
           <p>
             TestHub.Pk is online platform for educational institutes and
             students for provide them best test solution online without making
-            any effort. <p className="learn-more">Learn More...</p>
+            any effort. <span className="learn-more">Learn More...</span>
           </p>
         </div>
 
@@ -31,7 +30,7 @@ const ContactSection = (props) => {
             rel="noopener noreferrer"
             target="_blank"
             href="#about"
-            class="fa fa-facebook footer-link"
+            className="fa fa-facebook footer-link"
           >
             {" "}
           </a>
@@ -39,7 +38,7 @@ const ContactSection = (props) => {
             rel="noopener noreferrer"
             target="_blank"
             href="#about"
-            class="fa fa-instagram footer-link"
+            className="fa fa-instagram footer-link"
           >
             {" "}
           </a>
@@ -47,7 +46,7 @@ const ContactSection = (props) => {
             rel="noopener noreferrer"
             target="_blank"
             href="#about"
-            class="fa fa-twitter footer-link"
+            className="fa fa-twitter footer-link"
           >
             {" "}
           </a>
@@ -55,7 +54,7 @@ const ContactSection = (props) => {
             rel="noopener noreferrer"
             target="_blank"
             href="#about"
-            class="fa fa-youtube footer-link"
+            className="fa fa-youtube footer-link"
           >
             {" "}
           </a>

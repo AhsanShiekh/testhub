@@ -8,6 +8,7 @@ import BlogsPage from "./Pages/BlogsPage/BlogsPage";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import BlogPage from "./Pages/BlogPage/BlogPage";
+import AlertMsg from "./Components/Alert/Alert";
 
 const App = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -26,6 +27,7 @@ const App = () => {
     <div className="App">
       <Navbar showStatus={showSidebar} sidebar={showHideSidebar} />
       <Sidebar show={showSidebar} close={showHideSidebar} />
+      <AlertMsg />
 
       <Switch>
         <Route exact path="/" component={HomePage} />
