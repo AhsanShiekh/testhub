@@ -10,12 +10,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DropDown = ({ value, onChange, required }) => {
+const DropDown = ({ text, value, onChange, required, data }) => {
   const classes = useStyles();
 
   return (
     <div className="DropDown">
-      <span className="text">You are a :</span>
+      <span className="text">{text}</span>
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"
@@ -24,8 +24,9 @@ const DropDown = ({ value, onChange, required }) => {
         className={classes.select}
         required={required}
       >
-        <MenuItem value="student">Student</MenuItem>
-        <MenuItem value="institute">Institute</MenuItem>
+        {data.map((option) => (
+          <MenuItem value={option.value}>{option.text}</MenuItem>
+        ))}
       </Select>
     </div>
   );
