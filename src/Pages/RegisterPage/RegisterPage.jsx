@@ -14,6 +14,17 @@ import { useDispatch } from "react-redux";
 import { showHideAlert } from "../../redux/Alert/Alert.actions";
 import { showAlert } from "../../Components/Alert/Alert";
 
+const dropdownData = [
+  {
+    text: "Student",
+    value: "STUDENT",
+  },
+  {
+    text: "Institute",
+    value: "INSTITUTE",
+  },
+];
+
 const RegisterPage = ({ history }) => {
   const dispatch = useDispatch();
   const [showLoading, setShowLoading] = useState(false);
@@ -51,7 +62,7 @@ const RegisterPage = ({ history }) => {
         username,
         email,
         password,
-        accountType,
+        type: accountType,
       });
       if (res.data.created) {
         showAlert(
@@ -111,6 +122,8 @@ const RegisterPage = ({ history }) => {
               setState({ ...state, accountType: e.target.value })
             }
             required
+            data={dropdownData}
+            text="You are a : "
           />
           <Button showLoading={showLoading} isSubmit text="Register" />
         </div>

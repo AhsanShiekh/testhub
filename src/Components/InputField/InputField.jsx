@@ -8,17 +8,30 @@ const InputField = ({
   width = "80%",
   onChange,
   value,
+  textarea,
 }) => {
   return (
     <div style={{ width }} className="InputField">
       <p className="placeholder">{placeholder}</p>
-      <input
-        onChange={(e) => onChange(e)}
-        required={required}
-        type={type}
-        className="field"
-        value={value}
-      />
+      {textarea ? (
+        <textarea
+          type={type}
+          required={required}
+          onChange={(e) => onChange(e)}
+          value={value}
+          className="field"
+          cols="30"
+          rows="10"
+        ></textarea>
+      ) : (
+        <input
+          onChange={(e) => onChange(e)}
+          required={required}
+          type={type}
+          className="field"
+          value={value}
+        />
+      )}
     </div>
   );
 };

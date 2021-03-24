@@ -6,3 +6,24 @@
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+.App::-webkit-scrollbar {
+  display: none;
+  z-index: -1;
+}
+.App::-webkit-scrollbar-button {
+  display: none;
+  z-index: -1;
+}
+.App::-webkit-scrollbar-corner {
+  display: none;
+  z-index: -1;
+}
+.App::-webkit-scrollbar-thumb {
+  display: none;
+  z-index: -1;
+}
+.App::-webkit-scrollbar-track {
+  display: none;
+  z-index: -1;
+}

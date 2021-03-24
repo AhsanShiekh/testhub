@@ -1,0 +1,25 @@
+.ProfilePic {
+  height: 250px;
+  width: 40%;
+  position: relative;
+  margin: 0 39%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ProfilePic {
+    width: 75%;
+  }
+}
+
+//tabs
+@media only screen and (max-width: 1024px) and (min-width: 801px) {
+  .StudentProfileSetup {
+    width: 50%;
+  }
+}

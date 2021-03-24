@@ -9,6 +9,7 @@ import LoginPage from "./Pages/LoginPage/LoginPage";
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import BlogPage from "./Pages/BlogPage/BlogPage";
 import AlertMsg from "./Components/Alert/Alert";
+import ProfileSetupPage from "./Pages/ProfileSetupPage/ProfileSetupPage";
 
 const App = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/blogs" component={BlogsPage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
+        <Route path="/profile-setup" component={ProfileSetupPage} />
         <Route path="/blog/:slug" component={BlogPage} />
       </Switch>
     </div>
